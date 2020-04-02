@@ -29,15 +29,15 @@ type ChargeableFee struct {
 type InRangePredicate func(ran FeeRange) bool
 
 var FeeRanges = []FeeRange{
-	FeeRange{StartingAt: toSecondsFromHours(6), EndingAt: toSeconds(6, 30), Value: Regular},
-	FeeRange{StartingAt: toSeconds(6, 30), EndingAt: toSecondsFromHours(7), Value: Increased},
-	FeeRange{StartingAt: toSecondsFromHours(7), EndingAt: toSeconds(8, 30), Value: High},
-	FeeRange{StartingAt: toSeconds(8, 30), EndingAt: toSecondsFromHours(9), Value: Increased},
-	FeeRange{StartingAt: toSecondsFromHours(9), EndingAt: toSecondsFromHours(16), Value: Regular},
-	FeeRange{StartingAt: toSecondsFromHours(16), EndingAt: toSeconds(16, 30), Value: Increased},
-	FeeRange{StartingAt: toSeconds(16, 30), EndingAt: toSecondsFromHours(18), Value: High},
-	FeeRange{StartingAt: toSecondsFromHours(18), EndingAt: toSeconds(18, 30), Value: Increased},
-	FeeRange{StartingAt: toSeconds(18, 30), EndingAt: toSecondsFromHours(21), Value: Regular},
+	{StartingAt: toSecondsFromHours(6), EndingAt: toSeconds(6, 30), Value: Regular},
+	{StartingAt: toSeconds(6, 30), EndingAt: toSecondsFromHours(7), Value: Increased},
+	{StartingAt: toSecondsFromHours(7), EndingAt: toSeconds(8, 30), Value: High},
+	{StartingAt: toSeconds(8, 30), EndingAt: toSecondsFromHours(9), Value: Increased},
+	{StartingAt: toSecondsFromHours(9), EndingAt: toSecondsFromHours(16), Value: Regular},
+	{StartingAt: toSecondsFromHours(16), EndingAt: toSeconds(16, 30), Value: Increased},
+	{StartingAt: toSeconds(16, 30), EndingAt: toSecondsFromHours(18), Value: High},
+	{StartingAt: toSecondsFromHours(18), EndingAt: toSeconds(18, 30), Value: Increased},
+	{StartingAt: toSeconds(18, 30), EndingAt: toSecondsFromHours(21), Value: Regular},
 }
 
 func toSecondsFromHours(hours int) int {

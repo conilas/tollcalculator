@@ -18,14 +18,14 @@ type Vehicle struct {
 }
 
 var Vehicles = []Vehicle{
-	Vehicle{Type: Motorbike, Free: true},
-	Vehicle{Type: Car, Free: false},
-	Vehicle{Type: Truck, Free: false},
-	Vehicle{Type: Tractor, Free: true},
-	Vehicle{Type: Emergency, Free: true},
-	Vehicle{Type: Diplomat, Free: true},
-	Vehicle{Type: Foreign, Free: true},
-	Vehicle{Type: Military, Free: true},
+	{Type: Motorbike, Free: true},
+	{Type: Car, Free: false},
+	{Type: Truck, Free: false},
+	{Type: Tractor, Free: true},
+	{Type: Emergency, Free: true},
+	{Type: Diplomat, Free: true},
+	{Type: Foreign, Free: true},
+	{Type: Military, Free: true},
 }
 
 func IsFreeVehicle(v VehicleType) bool {

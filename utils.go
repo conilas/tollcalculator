@@ -36,7 +36,7 @@ func head(chargeableFees []ChargeableFee) ChargeableFee {
 }
 
 func tail(chargeableFees []ChargeableFee) []ChargeableFee {
-	return chargeableFees[1:len(chargeableFees)]
+	return chargeableFees[1:]
 }
 
 func toMapFromHoursToFeesRec(fees []ChargeableFee, values map[time.Time][]ChargeableFee) map[time.Time][]ChargeableFee {
