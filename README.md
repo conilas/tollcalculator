@@ -45,3 +45,17 @@ Collected tolls are [18]
 ```
 
 Which is a High price for that moment. (:
+
+Another example is if you run it with more than one time with less than one hour difference. For instance, this: 
+
+```
+ ./tollcalculator -vehicle 0 -timestamps 1585839171
+```
+
+Shall always return the same as this:
+
+```
+ ./tollcalculator -vehicle 0 -timestamps 1585839171,1585839172,1585839173
+```
+
+Both return 18. This is the time range difference case! There are some test scenarios setup in `fees_collectors_test.go`. :tada:
