@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	//"sort"
 	"time"
 )
 
@@ -30,8 +29,6 @@ func CalculateFeesInADay(times []time.Time, v VehicleType) int {
 	uniqueFeesPerHour := ReduceFromHourFeeToSingleFeeList(mappedFees, getSingleFeeFromList)
 	collectedFeesOnDay := ReduceFees(uniqueFeesPerHour, IncrementFee)
 
-	log.Printf("The accumulated value for the day is [%v]. The hourly map is [%v]. ", collectedFeesOnDay, mappedFees)
-
 	return Min(collectedFeesOnDay, 60)
 }
 
@@ -46,7 +43,7 @@ func CalculateAllFees(times []time.Time, v VehicleType) int {
 	reducedValues := ReduceTimesToDailyFees(mapWithDates, CalculateFeesInADayForCar(v))
 	totalFees := ReduceDailyMapToFees(reducedValues, Sum)
 
-	log.Printf("The values for each day are [%v] for car of type [%v]. The sum of all fees is [%v]", reducedValues, v, totalFees)
+	log.Printf("The values for each day are [%v] for car of type [%v]. ", reducedValues, v)
 
 	return totalFees
 }

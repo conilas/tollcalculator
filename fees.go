@@ -50,8 +50,8 @@ func toSeconds(hours int, minutes int) int {
 
 func toDaySeconds(t time.Time) int {
 	year, month, day := t.Date()
-	current_date_start := time.Date(year, month, day, 0, 0, 0, 0, t.Location())
-	return int(t.Sub(current_date_start).Seconds())
+	currentStartDate := time.Date(year, month, day, 0, 0, 0, 0, t.Location())
+	return int(t.Sub(currentStartDate).Seconds())
 }
 
 func isFreeDate(t time.Time) bool {

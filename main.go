@@ -49,5 +49,6 @@ func main() {
 		return
 	}
 
-	log.Printf("Car type is [%v] and timestamps are %v. Collected tolls are [%v]", parsedCar, parsedTimes, CalculateAllFees(parsedTimes, parsedCar))
+	log.Printf("Your total collected tolls are [%v]. The times (human-readable) for tools are [%v]. Please note that we use GMT+2/Swedish time to calculate tolls.",
+		CalculateAllFees(parsedTimes, parsedCar), parsedTimes)
 }
